@@ -2,7 +2,7 @@ package com.mateus.service.impl;
 
 import com.mateus.domain.User;
 import com.mateus.domain.dto.UserDTO;
-import com.mateus.dto.UserFormDTO;
+import com.mateus.domain.dto.UserFormDTO;
 import com.mateus.exception.ObjectNotFoundException;
 import com.mateus.repository.UserRepository;
 import com.mateus.service.UserService;

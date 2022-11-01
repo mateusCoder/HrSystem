@@ -1,7 +1,7 @@
 package com.mateus.service;
 
 import com.mateus.domain.dto.UserDTO;
-import com.mateus.dto.UserFormDTO;
+import com.mateus.domain.dto.UserFormDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

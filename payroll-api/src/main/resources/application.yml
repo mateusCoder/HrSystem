@@ -1,12 +1,10 @@
 server:
-  port: 8080
+  port: 8100
 spring:
-  application:
-    name: user-api
   datasource:
     driverClassName: org.h2.Driver
     password: ''
-    url: jdbc:h2:mem:devs-user-api
+    url: jdbc:h2:mem:devs-payroll-api
     username: sa
   h2:
     console:

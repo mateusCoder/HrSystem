@@ -1,7 +1,7 @@
 package com.mateus.controller;
 
 import com.mateus.domain.dto.UserDTO;
-import com.mateus.dto.UserFormDTO;
+import com.mateus.domain.dto.UserFormDTO;
 import com.mateus.service.impl.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
