@@ -26,7 +26,6 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public PayrollDTO getPayment(Long workerId, PayrollFormDTO payrollFormDTO) {
         log.info("PAYROLL_SERVICE ::: Get request on " + env.getProperty("local.server.port") + " port ");
-
         try {
             UserDTO userDTO = userFeign.findById(workerId).getBody();
             if(Objects.nonNull(userDTO)){

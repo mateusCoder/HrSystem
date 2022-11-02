@@ -7,7 +7,9 @@ import com.mateus.exception.ObjectNotFoundException;
 import com.mateus.repository.UserRepository;
 import com.mateus.service.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.core.env.Environment;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
@@ -23,8 +26,12 @@ public class UserServiceImpl implements UserService {
 
     private final ModelMapper mapper;
 
+    private final Environment env;
+
+
     @Override
     public UserDTO findById(Long id) {
+        log.info("USER_SERVICE ::: Get request on " + env.getProperty("local.server.port") + " port ");
         return mapper.map(userRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("User Not Found!")), UserDTO.class);
     }
 
